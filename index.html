@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promier Inventory System — Pre-Meeting Questionnaire</title>
+</head>
+<body>
+<script>
+fetch('https://sulbxwfldnesxtqbptib.supabase.co/storage/v1/object/public/forms/inventory-questionnaire.html')
+  .then(function(r) { return r.text(); })
+  .then(function(html) {
+    document.open();
+    document.write(html);
+    document.close();
+  })
+  .catch(function(e) {
+    document.body.innerHTML = '<h1>Loading failed</h1><p>Please try refreshing. If the issue persists, contact matt@conceptconsumer.com</p>';
+  });
+</script>
+</body>
+</html>
